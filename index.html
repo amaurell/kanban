@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanban Board</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .draggable {
+      cursor: move;
+    }
+    .invisible {
+      display: none;
+    }
+    .task-date {
+      font-size: 0.8rem;
+      color: gray;
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <div class="container mx-auto p-8">
+    <h1 class="text-3xl font-bold text-center mb-6">Kanban Board</h1>
+    
+    <!-- Controles do Kanban -->
+    <div class="flex justify-center mb-4 space-x-4">
+      <button id="addColumn" class="bg-blue-500 text-white px-4 py-2 rounded-md">Adicionar Coluna</button>
+      <button id="addTask" class="bg-green-500 text-white px-4 py-2 rounded-md">Adicionar Tarefa</button>
+      <button id="resetBoard" class="bg-red-500 text-white px-4 py-2 rounded-md">Resetar Board</button>
+    </div>
+    
+    <!-- Seção de colunas -->
+    <div id="board" class="flex space-x-4 overflow-auto">
+      <!-- Colunas Dinâmicas Serão Inseridas Aqui -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
